@@ -1,27 +1,77 @@
-# IronGemClient
+# 🏋️ IronGem Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
+IronGem is a modern gym management system built with Angular.
 
-## Development server
+The application allows users to browse gym courses, enroll in courses,
+manage their profiles, and review courses.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Administrators can manage users, courses, offers, and enrollments.
 
-## Code scaffolding
+## 🚀 Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Authentication
+- User registration
+- User login
+- JWT authentication
+- Logout
+- Role-based authorization
 
-## Build
+### Courses
+- View all courses
+- View course details
+- Enroll in a course
+- View enrolled courses
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Reviews
+- Add a review
+- Rate courses
+- View course reviews
 
-## Running unit tests
+### Offers
+- View available offers
+- View discounted course prices
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Admin
+- Manage users
+- Manage courses
+- Manage offers
+- Manage enrollments
 
-## Running end-to-end tests
+## 🛠️ Technologies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Angular 18
+- TypeScript
+- HTML5
+- CSS3
+- RxJS
+- Angular Router
+- Reactive Forms
+- HTTP Client
+- JWT Authentication
 
-## Further help
+## 📁 Project Structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+src/app/
+│
+├── core/
+│   ├── guards/
+│   ├── interceptors/
+│   └── services/
+│
+├── shared/
+│   ├── components/
+│   └── models/
+│
+├── features/
+│   ├── auth/
+│   ├── home/
+│   ├── courses/
+│   ├── offers/
+│   ├── reviews/
+│   ├── profile/
+│   └── admin/
+│
+├── app.component.ts
+├── app.component.html
+├── app.component.css
+└── app.routes.ts
