@@ -1,1 +1,134 @@
-<p>register works!</p>
+<div class="auth-page">
+
+  <div class="auth-card">
+
+    <div class="logo-title">
+      Join <span>IRON</span> Community
+    </div>
+
+    <p class="subtitle">
+      Create an account to start your fitness journey
+    </p>
+
+    <form
+      [formGroup]="registerForm"
+      (ngSubmit)="register()">
+
+      <div class="form-row">
+
+        <input
+          type="text"
+          formControlName="firstName"
+          placeholder="First Name"
+        />
+
+        <input
+          type="text"
+          formControlName="lastName"
+          placeholder="Last Name"
+        />
+
+      </div>
+
+      <div class="form-row">
+
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Email Address"
+        />
+
+        <input
+          type="tel"
+          formControlName="phoneNumber"
+          placeholder="Phone Number"
+        />
+
+      </div>
+
+      <div class="form-row">
+
+        <input
+          type="date"
+          formControlName="birthDate"
+        />
+
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Password"
+        />
+
+      </div>
+
+      <input
+        class="full-input"
+        type="password"
+        formControlName="confirmPassword"
+        placeholder="Confirm Password"
+      />
+
+      <label class="terms">
+
+        <input
+          type="checkbox"
+          formControlName="agreeToTerms"
+        />
+
+        <span>
+          I agree to the Terms of Service and Privacy Policy
+        </span>
+
+      </label>
+
+      <button
+        type="submit"
+        class="primary-btn"
+        [disabled]="registerForm.invalid || isLoading">
+
+        {{ isLoading ? 'Creating account...' : 'Sign Up' }}
+
+      </button>
+
+      <button
+        type="button"
+        class="secondary-btn"
+        (click)="goToLogin()">
+
+        Already have an account? Sign In
+
+      </button>
+
+    </form>
+
+    <div class="divider">
+      <span></span>
+      <p>Or continue with</p>
+      <span></span>
+    </div>
+
+    <div class="social-buttons">
+
+      <button type="button" class="social-btn">
+        <span class="google-icon">G</span>
+        Google
+      </button>
+
+      <button type="button" class="social-btn">
+        <span class="microsoft-icon">▦</span>
+        Microsoft
+      </button>
+
+    </div>
+
+    <p class="success-message" *ngIf="successMessage">
+      {{ successMessage }}
+    </p>
+
+    <p class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </p>
+
+  </div>
+
+</div>
