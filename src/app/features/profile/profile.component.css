@@ -1,0 +1,115 @@
+.profile-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      rgba(15, 15, 15, 0.75),
+      rgba(15, 15, 15, 0.75)
+    ),
+    url('/gym-bg.png');
+
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-card {
+  width: 500px;
+
+  padding: 40px;
+
+  background: rgba(20, 20, 20, 0.75);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+}
+
+.profile-card h1 {
+  text-align: center;
+
+  margin: 0;
+
+  font-size: 30px;
+}
+
+.profile-card h1 span {
+  color: #bfff00;
+}
+
+.subtitle {
+  text-align: center;
+
+  color: #aaa;
+
+  font-size: 12px;
+
+  margin-bottom: 30px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.info-row span {
+  color: #aaa;
+
+  font-size: 12px;
+}
+
+.info-row strong {
+  font-size: 13px;
+}
+
+.role {
+  color: #bfff00;
+}
+
+.loading {
+  text-align: center;
+
+  color: #bfff00;
+}
+
+.error {
+  text-align: center;
+
+  color: #ff6666;
+}
+
+.logout-btn {
+  width: 100%;
+
+  height: 42px;
+
+  margin-top: 30px;
+
+  border: 1px solid #bfff00;
+
+  background: #bfff00;
+
+  color: #111;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #d0ff4d;
+}

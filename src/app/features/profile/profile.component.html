@@ -1,1 +1,68 @@
-<p>profile works!</p>
+<div class="profile-page">
+
+  <div class="profile-card">
+
+    <h1>
+      My <span>Profile</span>
+    </h1>
+
+    <p class="subtitle">
+      Your IronGym account information
+    </p>
+
+    <div *ngIf="isLoading" class="loading">
+      Loading profile...
+    </div>
+
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="profile && !isLoading" class="profile-info">
+
+      <div class="info-row">
+        <span>First Name</span>
+        <strong>{{ profile.firstName }}</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Last Name</span>
+        <strong>{{ profile.lastName }}</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Email</span>
+        <strong>{{ profile.email }}</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Phone</span>
+        <strong>{{ profile.phoneNumber || 'Not provided' }}</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Birth Date</span>
+        <strong>{{ profile.birthDate }}</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Role</span>
+        <strong class="role">
+          {{ profile.role }}
+        </strong>
+      </div>
+
+      <button
+        type="button"
+        class="logout-btn"
+        (click)="logout()">
+
+        Logout
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
